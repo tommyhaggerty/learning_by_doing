@@ -1,22 +1,18 @@
 #!/usr/bin/env ruby
+# Tommy Haggerty - FizzBuzz
 
-# Create a program called "fizz_buzz.rb"
-#
-# This program should output the numbers 1 through 100, however:
-# * If evenly divisible by 3, print Fizz
-# * If evenly divisible by 5, print Buzz
-# * If evenly divisible by 3 and 5, print FizzBuzz
-# * Otherwise, print out the number
-
-count = 0
+count = 1 # inital count
 while count <= 100
-  if count % 3 == 0 && count % 5 == 0
+  if count % 3 == 0 && count % 5 == 0 # FizzBuzz determiner
     puts "FizzBuzz"
-  elsif count % 3 == 0
+    count += 1
+  elsif count % 3 == 0 # Fizz determiner
     puts "Fizz"
-  elsif count % 5 == 0
+    count += 1
+  elsif count % 5 == 0 # Buzz determiner
     puts "Buzz"
-  else puts "#{count}"
+    count += 1
+  else puts "#{count}" # puts the count if not divisible by 3 or 5
     count += 1
   end
 end
