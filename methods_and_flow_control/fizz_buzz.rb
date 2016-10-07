@@ -3,16 +3,13 @@
 
 count = 1 # inital count
 while count <= 100
-  if count % 3 == 0 && count % 5 == 0 # FizzBuzz determiner
-    puts "FizzBuzz"
-    count += 1
-  elsif count % 3 == 0 # Fizz determiner
-    puts "Fizz"
-    count += 1
-  elsif count % 5 == 0 # Buzz determiner
-    puts "Buzz"
-    count += 1
-  else puts "#{count}" # puts the count if not divisible by 3 or 5
-    count += 1
+  if (count % 3).zero? && (count % 5).zero? # FizzBuzz determiner
+    puts 'FizzBuzz'
+  elsif (count % 3).zero? # Fizz determiner
+    puts 'Fizz'
+  elsif (count % 5).zero? # Buzz determiner
+    puts 'Buzz'
+  else puts count.to_s # puts the count if not divisible by 3 or 5
   end
+  count += 1
 end
