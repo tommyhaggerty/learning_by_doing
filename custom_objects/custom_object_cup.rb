@@ -9,6 +9,7 @@ class Cup
     @flavor = 'water'
     @volume = 'full'
   end
+  
   # This method takes a string and lets you pick a cup size
   def cup_size(size)
     @size = size
