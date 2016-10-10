@@ -6,9 +6,9 @@
 #   * pay method takes one floating number for how much is paid, should return
 #     how much change is given
 
-
+# CashRegister is a practice class which will output item cost, payment amount,
+# a total and the change due.
 class CashRegister
-
   def initialize
     @total = 0
   end
@@ -24,7 +24,8 @@ class CashRegister
   end
 
   def pay(pay_amt)
-    # Takes a floating point number for how much is paid, should return how much change is given.
+    # Takes a floating point number for how much is paid, should return how much
+    # change is given.
     change = pay_amt - @total
     puts "You are paying $#{pay_amt}."
     puts "You owe: $#{@total}"
