@@ -9,13 +9,10 @@ class MadLibs
     word = @word
   end
 
-  def stores_word_in_the_array(word)
-    @given_words.push(word)
-  end
-
   def word_types(wtype)
     puts "Please enter a(n) #{wtype}."
     @word = gets.chomp
+    @given_words.push(@word)
   end
 
   def array_reverse
@@ -28,7 +25,7 @@ class MadLibs
     puts "that is near a/an #{@given_words.pop} or up on a/an #{@given_words.pop}."
     puts "A good vacation place is one where you can ride #{@given_words.pop} "
     puts "or play #{@given_words.pop} or go hunting for #{@given_words.pop}. I like"
-    puts " to spend my time #{@given_words.pop} or #{@given_words.pop}."
+    puts "to spend my time #{@given_words.pop} or #{@given_words.pop}."
     puts 'When parents go on a vacation, they spend their time eating '
     puts "three #{@given_words.pop} a day, and fathers play golf, and mothers "
     puts "sit around #{@given_words.pop}. Last summer, my little brother "
