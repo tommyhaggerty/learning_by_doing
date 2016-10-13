@@ -9,12 +9,10 @@
 # CashRegister is a practice class which will output item cost, payment amount,
 # a total and the change due.
 class CashRegister
+  attr_reader :total
+
   def initialize
     @total = 0
-  end
-
-  def total
-    @total
   end
 
   def purchase(item_amt)
