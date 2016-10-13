@@ -4,9 +4,17 @@
 #   * purchase method takes a floating number and adds that to the total
 #   * total method returns how much is owed
 #   * pay method takes one floating number for how much is paid, should return how much change is given
+
 register = new CashRegister
+register.total  # => 0.00
+register.purchase(3.78)  # => 3.78
+register.total  # => 3.78
+register.pay(5.00)  # => "Your change is $1.22"
+register.total # => 0.00
+
 
 class CashRegister
+
   def initialize
     @total = 0
   end
