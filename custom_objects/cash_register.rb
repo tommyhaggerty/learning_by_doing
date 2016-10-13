@@ -13,6 +13,7 @@ class CashRegister
 
   def initialize
     @total = 0
+    @change = 0
   end
 
   def purchase(item_amt)
@@ -24,18 +25,17 @@ class CashRegister
   def pay(pay_amt)
     # Takes a floating point number for how much is paid, should return how much
     # change is given.
-    change = pay_amt - @total
-    puts "You are paying $#{pay_amt}."
-    puts "You owe: $#{@total}"
+    puts "You owe: $#{@total.round(2)}"
+    puts "You are paying $#{pay_amt.round(2)}."
 
     if pay_amt > total
+      @change = pay_amt - total
       @total = 0
+      puts "Your change is $#{@change.round(2)}."
     else
       @total -= pay_amt
+      puts "You owe: $#{@total.round(2)}"
     end
-
-    change
-    puts "Your change is $#{change.round(2)}."
   end
 end
 
@@ -43,5 +43,6 @@ register = CashRegister.new
 register.total # => 0.00
 register.purchase(3.78) # => 3.78
 register.total # => 3.78
-register.pay(5.00) # => "Your change is $1.22"
+register.pay(2.50) # => "Your change is $1.22"
+register.pay(2.00)
 register.total # => 0.00
