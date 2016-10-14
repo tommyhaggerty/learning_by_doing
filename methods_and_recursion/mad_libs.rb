@@ -19,16 +19,22 @@ class MadLibs
 
   def show_mad_lib
     puts <<-END_OF_MADLIB
-    A vacation is when you take a trip to some #{@given_words.pop} place with your #{@given_words.pop} family.
-    Usually you go to some place that is near a/an #{@given_words.pop} or up on a/an #{@given_words.pop}.
-    A good vacation place is one where you can ride #{@given_words.pop} or play #{@given_words.pop} or go hunting
-    for #{@given_words.pop}. I like to spend my time #{@given_words.pop} or #{@given_words.pop}. When parents go
-    on a vacation, they spend their time eating three #{@given_words.pop} a day, and fathers play golf, and mothers
-    sit around #{@given_words.pop}. Last summer, my little brother fell in a/an #{@given_words.pop} and got poison
-    #{@given_words.pop} all over his #{@given_words.pop}. My family is going to go to (the) #{@given_words.pop},
-    and I will practice #{@given_words.pop}. Parents need vacations more than kids because parents are always very
-    #{@given_words.pop} and because they have to work #{@given_words.pop} hours every day all year making enough
-    #{@given_words.pop} to pay for the vacation.
+    A vacation is when you take a trip to some #{@given_words.pop} place
+    with your #{@given_words.pop} family. Usually you go to some place
+    that is near a/an #{@given_words.pop} or up on a/an #{@given_words.pop}.
+    A good vacation place is one where you can ride #{@given_words.pop}
+    or play #{@given_words.pop} or go hunting for #{@given_words.pop}. I like
+    to spend my time #{@given_words.pop} or #{@given_words.pop}.
+    When parents go on a vacation, they spend their time eating
+    three #{@given_words.pop} a day, and fathers play golf, and mothers
+    sit around #{@given_words.pop}. Last summer, my little brother
+    fell in a/an #{@given_words.pop} and got poison #{@given_words.pop} all
+    over his #{@given_words.pop}. My family is going to go to (the)
+    #{@given_words.pop}, and I will practice #{@given_words.pop}. Parents
+    need vacations more than kids because parents are always very
+    #{@given_words.pop} and because they have to work #{@given_words.pop}
+    hours every day all year making enough #{@given_words.pop} to pay
+    for the vacation.
 END_OF_MADLIB
   end
 end
