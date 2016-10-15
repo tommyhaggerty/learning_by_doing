@@ -1,8 +1,13 @@
 #!/usr/bin/env ruby
 
+# def pluralize(n, text)
+#   return text + 's' if n != 1
+#   text
+# end
+
 def beer_song(beer_count)
   while beer_count >= 0
-    if beer_count > 1
+    if beer_count >= 1
       puts "#{beer_count} bottles of beer on the wall, #{beer_count} bottles of beer."
       puts "Take one down and pass it around, #{beer_count-1} bottles of beer on the wall.\n\n"
     elsif beer_count == 1
@@ -17,5 +22,7 @@ def beer_song(beer_count)
   end
 end
 
-beer_song(4)
+beer_song(99)
 
+-Take one down and pass it around, 1 bottle of beer on the wall.
+  Take one down and pass it around, 1 bottles of beer on the wall.
