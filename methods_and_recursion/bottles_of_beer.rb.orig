@@ -1,28 +1,30 @@
 #!/usr/bin/env ruby
 
-# def pluralize(n, text)
-#   return text + 's' if n != 1
-#   text
-# end
+def pluralize(n, text)
+  if n > 1
+    "#{n} " + text + 's'
+  elsif n == 1
+    "#{n} " + text
+  elsif n.zero?
+    "#{n} " + text + 's'
+  else text
+  end
+end
 
-def beer_song(beer_count)
-  while beer_count >= 0
-    if beer_count >= 1
-      puts "#{beer_count} bottles of beer on the wall, #{beer_count} bottles of beer."
-      puts "Take one down and pass it around, #{beer_count-1} bottles of beer on the wall.\n\n"
-    elsif beer_count == 1
-      puts '1 bottle of beer on the wall, 1 bottle of beer.'
-      puts "Take one down and pass it around, no more bottles of beer on the wall.\n\n"
-    elsif beer_count < 1
+def beer_song(beers)
+  while beers >= 0
+    if beers >= 1
+      print "#{pluralize(beers, 'bottle')} of beer on the wall,"
+      puts "#{pluralize(beers, 'bottle')} of beer."
+      print 'Take one down and pass it around, '
+      puts "#{pluralize((beers - 1), 'bottle')} of beer on the wall.\n\n"
+    else
       puts 'No more bottles of beer on the wall, no more bottles of beer.'
-      puts "Go to the store and buy some more, 99 bottles of beer on the wall.\n\n"
-    else  break
+      print 'Go to the store and buy some more, 99 bottles of beer on the wall.'
+      puts "\n\n"
     end
-    beer_count -= 1
+    beers -= 1
   end
 end
 
 beer_song(99)
-
--Take one down and pass it around, 1 bottle of beer on the wall.
-  Take one down and pass it around, 1 bottles of beer on the wall.
