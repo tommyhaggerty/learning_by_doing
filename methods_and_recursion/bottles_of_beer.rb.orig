@@ -1,29 +1,25 @@
 #!/usr/bin/env ruby
 
-def pluralize(n, text)
-  if n > 1
-    "#{n} " + text + 's'
-  elsif n == 1
-    "#{n} " + text
-  elsif n.zero?
-    "#{n} " + text + 's'
-  else text
-  end
+def pluralize(number, text)
+  text += 's' if number != 1
+  "#{number} #{text}"
+end
+
+def sing_verse(beers)
+  print "#{pluralize(beers, 'bottle')} of beer on the wall, "
+  puts "#{pluralize(beers, 'bottle')} of beer."
+  print 'Take one down and pass it around, '
+  puts "#{pluralize((beers - 1), 'bottle')} of beer on the wall.\n\n"
 end
 
 def beer_song(beers)
-  while beers >= 0
-    if beers >= 1
-      print "#{pluralize(beers, 'bottle')} of beer on the wall,"
-      puts "#{pluralize(beers, 'bottle')} of beer."
-      print 'Take one down and pass it around, '
-      puts "#{pluralize((beers - 1), 'bottle')} of beer on the wall.\n\n"
-    else
-      puts 'No more bottles of beer on the wall, no more bottles of beer.'
-      print 'Go to the store and buy some more, 99 bottles of beer on the wall.'
-      puts "\n\n"
-    end
-    beers -= 1
+  sing_verse(beers)
+  if beers > 1
+    beer_song(beers - 1)
+  else
+    puts 'No more bottles of beer on the wall, no more bottles of beer.'
+    print 'Go to the store and buy some more, 99 bottles of beer on the wall.'
+    puts "\n\n"
   end
 end
 
