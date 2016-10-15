@@ -2,7 +2,7 @@
 # Tommy Haggerty - FizzBuzz
 
 count = 1 # inital count
-while count <= 100
+(1..100).each do |count|
   if (count % 3).zero? && (count % 5).zero? # FizzBuzz determiner
     puts 'FizzBuzz'
   elsif (count % 3).zero? # Fizz determiner
@@ -13,3 +13,4 @@ while count <= 100
   end
   count += 1
 end
+
