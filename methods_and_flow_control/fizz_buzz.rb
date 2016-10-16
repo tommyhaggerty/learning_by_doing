@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 # Tommy Haggerty - FizzBuzz
 
-count = 1 # inital count
 (1..100).each do |count|
   if (count % 3).zero? && (count % 5).zero? # FizzBuzz determiner
     puts 'FizzBuzz'
@@ -11,6 +10,5 @@ count = 1 # inital count
     puts 'Buzz'
   else puts count.to_s # puts the count if not divisible by 3 or 5
   end
-  count += 1
 end
 
