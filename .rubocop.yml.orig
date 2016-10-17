@@ -1,0 +1,10 @@
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+AllCops:
+  Exclude:
+    - 'Guardfile'
+<<<<<<< HEAD
+    - 'homework_tester/**/*'
+=======
+>>>>>>> Initial setup
