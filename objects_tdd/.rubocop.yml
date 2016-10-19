@@ -1,0 +1,8 @@
+.rubocop.yml
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+AllCops:
+  Exclude:
+    - 'Guardfile'
+    - 'homework_tester/**/*'
