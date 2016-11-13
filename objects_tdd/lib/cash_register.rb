@@ -9,6 +9,7 @@ class CashRegister
   end
 
   def purchase(amount)
+    puts "Your item costs $#{round_decimal(amount)}"
     @total += amount
   end
 
@@ -17,8 +18,12 @@ class CashRegister
   end
 
   def pay(amount)
+    puts "You owe: $#{round_decimal(@total)}"
+    puts "You are paying $#{round_decimal(amount)}."
+
     if amount <= @total
       @total -= amount
+      puts "You owe: $#{round_decimal(@total)}"
     else
       # @total -= amount
       "Your change due is #{round_decimal((@total -= amount).to_f.abs)}."
