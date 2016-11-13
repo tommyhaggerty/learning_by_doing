@@ -18,7 +18,7 @@ class CashRegister
 
   def purchase(item_amt)
     # Takes a floating point and adds it to the total
-    puts "Your item costs $#{item_amt}"
+    puts "Your item costs $#{item_amt.round(2)}"
     @total += item_amt
   end
 
@@ -31,7 +31,7 @@ class CashRegister
     if pay_amt > total
       @change = pay_amt - total
       @total = 0
-      puts "Your change is $#{@change.round(2)}."
+      puts "Your change due is $#{@change.round(2)}."
     else
       @total -= pay_amt
       puts "You owe: $#{@total.round(2)}"
